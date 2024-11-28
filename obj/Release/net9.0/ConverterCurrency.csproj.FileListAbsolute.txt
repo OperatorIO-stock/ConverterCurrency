@@ -1,0 +1,14 @@
+/home/casper/Документы/Codes/ConverterCurrency/bin/Release/net9.0/ConverterCurrency
+/home/casper/Документы/Codes/ConverterCurrency/bin/Release/net9.0/ConverterCurrency.deps.json
+/home/casper/Документы/Codes/ConverterCurrency/bin/Release/net9.0/ConverterCurrency.runtimeconfig.json
+/home/casper/Документы/Codes/ConverterCurrency/bin/Release/net9.0/ConverterCurrency.dll
+/home/casper/Документы/Codes/ConverterCurrency/bin/Release/net9.0/ConverterCurrency.pdb
+/home/casper/Документы/Codes/ConverterCurrency/obj/Release/net9.0/ConverterCurrency.GeneratedMSBuildEditorConfig.editorconfig
+/home/casper/Документы/Codes/ConverterCurrency/obj/Release/net9.0/ConverterCurrency.AssemblyInfoInputs.cache
+/home/casper/Документы/Codes/ConverterCurrency/obj/Release/net9.0/ConverterCurrency.AssemblyInfo.cs
+/home/casper/Документы/Codes/ConverterCurrency/obj/Release/net9.0/ConverterCurrency.csproj.CoreCompileInputs.cache
+/home/casper/Документы/Codes/ConverterCurrency/obj/Release/net9.0/ConverterCurrency.dll
+/home/casper/Документы/Codes/ConverterCurrency/obj/Release/net9.0/refint/ConverterCurrency.dll
+/home/casper/Документы/Codes/ConverterCurrency/obj/Release/net9.0/ConverterCurrency.pdb
+/home/casper/Документы/Codes/ConverterCurrency/obj/Release/net9.0/ConverterCurrency.genruntimeconfig.cache
+/home/casper/Документы/Codes/ConverterCurrency/obj/Release/net9.0/ref/ConverterCurrency.dll
