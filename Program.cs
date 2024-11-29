@@ -42,7 +42,7 @@ class Program
                     Console.WriteLine("Enter the amount of currency");
                     userInputAmountCurrency = float.Parse(Console.ReadLine());
 
-                    if (goldMoney >= userInputAmountCurrency)
+                    if (goldMoney >= userInputAmountCurrency && userInputAmountCurrency > 0)
                     {
                         silverMoney += userInputAmountCurrency * fixedExchangeGoldToSilver;
                         goldMoney -= userInputAmountCurrency;
@@ -57,7 +57,7 @@ class Program
                     Console.WriteLine("Enter the amount of currency");
                     userInputAmountCurrency = float.Parse(Console.ReadLine());
                     
-                    if (silverMoney >= userInputAmountCurrency)
+                    if (silverMoney >= userInputAmountCurrency || userInputAmountCurrency > 0)
                     {
                         goldMoney += userInputAmountCurrency * fixedExchangeSilverToGold;
                         silverMoney -= userInputAmountCurrency;
@@ -72,7 +72,7 @@ class Program
                     Console.WriteLine("Enter the amount of currency");
                     userInputAmountCurrency = float.Parse(Console.ReadLine());
                     
-                    if (goldMoney >= userInputAmountCurrency)
+                    if (goldMoney >= userInputAmountCurrency && userInputAmountCurrency > 0)
                     {
                         platinumMoney += userInputAmountCurrency * fixedExchangeGoldToPlatinum;
                         goldMoney -= userInputAmountCurrency;
@@ -87,7 +87,7 @@ class Program
                     Console.WriteLine("Enter the amount of currency");
                     userInputAmountCurrency = float.Parse(Console.ReadLine());
                     
-                    if (platinumMoney >= userInputAmountCurrency)
+                    if (platinumMoney >= userInputAmountCurrency && userInputAmountCurrency > 0)
                     {
                         goldMoney += userInputAmountCurrency * fixedExchangePlatinumToGold;
                         platinumMoney -= userInputAmountCurrency;
@@ -102,7 +102,7 @@ class Program
                     Console.WriteLine("Enter the amount of currency");
                     userInputAmountCurrency = float.Parse(Console.ReadLine());
                     
-                    if (silverMoney >= userInputAmountCurrency)
+                    if (silverMoney >= userInputAmountCurrency && userInputAmountCurrency > 0)
                     {
                         platinumMoney += userInputAmountCurrency * fixedExchangeSilverToPlatinum;
                         silverMoney -= userInputAmountCurrency;
@@ -117,7 +117,7 @@ class Program
                     Console.WriteLine("Enter the amount of currency");
                     userInputAmountCurrency = float.Parse(Console.ReadLine());
                     
-                    if (platinumMoney >= userInputAmountCurrency)
+                    if (platinumMoney >= userInputAmountCurrency && userInputAmountCurrency > 0)
                     {
                         silverMoney += userInputAmountCurrency * fixedExchangePlatinumToSilver;
                         platinumMoney -= userInputAmountCurrency;
