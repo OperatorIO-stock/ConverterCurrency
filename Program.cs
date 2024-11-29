@@ -13,7 +13,6 @@ class Program
 
         const string CommandExitProgram = "/exit";
 
-        float fixedExchange;
         float fixedExchangeGoldToSilver = 2.3f;
         float fixedExchangeGoldToPlatinum = 1.3f;
         float fixedExchangeSilverToGold = 1 / 2.3f;
@@ -25,8 +24,7 @@ class Program
         float silverMoney = 8;
         float platinumMoney = 12;
 
-        float selectedCurrency;
-        float secondCurrency;
+        float userInputAmountCurrency;
 
         bool isProgramWork = true;
 
@@ -41,69 +39,93 @@ class Program
             switch(Console.ReadLine())
             {
                 case CommandForExchangeGoldToSilver:
-                    fixedExchange = fixedExchangeGoldToSilver;
-                    selectedCurrency = goldMoney;
-                    secondCurrency = silverMoney;
+                    Console.WriteLine("Enter the amount of currency");
+                    userInputAmountCurrency = float.Parse(Console.ReadLine());
 
-                    Converter(ref selectedCurrency, ref secondCurrency, fixedExchange);
-
-                    goldMoney = selectedCurrency;
-                    silverMoney = secondCurrency;
+                    if (goldMoney >= userInputAmountCurrency)
+                    {
+                        silverMoney += userInputAmountCurrency * fixedExchangeGoldToSilver;
+                        goldMoney -= userInputAmountCurrency;
+                    }
+                    else
+                    {
+                        Console.WriteLine("There are not enough funds to exchange or the requested amount is invalid.");
+                    }
                     break;
 
                 case CommandForExchangeSilverToGold:
-                    fixedExchange = fixedExchangeSilverToGold;
-                    selectedCurrency = silverMoney;
-                    secondCurrency = goldMoney;
-
-                    Converter(ref selectedCurrency, ref secondCurrency, fixedExchange);
-
-                    silverMoney = selectedCurrency;
-                    goldMoney = secondCurrency;           
-                    break;
+                    Console.WriteLine("Enter the amount of currency");
+                    userInputAmountCurrency = float.Parse(Console.ReadLine());
+                    
+                    if (silverMoney >= userInputAmountCurrency)
+                    {
+                        goldMoney += userInputAmountCurrency * fixedExchangeSilverToGold;
+                        silverMoney -= userInputAmountCurrency;
+                    }
+                    else
+                    {
+                        Console.WriteLine("There are not enough funds to exchange or the requested amount is invalid.");
+                    }
+                    break;           
 
                 case CommandForExchangeGoldToPlatinum:
-                    fixedExchange = fixedExchangeGoldToPlatinum;
-                    selectedCurrency = goldMoney;
-                    secondCurrency = platinumMoney;
-
-                    Converter(ref selectedCurrency, ref secondCurrency, fixedExchange); 
-
-                    goldMoney = selectedCurrency;
-                    platinumMoney = secondCurrency;                   
+                    Console.WriteLine("Enter the amount of currency");
+                    userInputAmountCurrency = float.Parse(Console.ReadLine());
+                    
+                    if (goldMoney >= userInputAmountCurrency)
+                    {
+                        platinumMoney += userInputAmountCurrency * fixedExchangeGoldToPlatinum;
+                        goldMoney -= userInputAmountCurrency;
+                    }
+                    else
+                    {
+                        Console.WriteLine("There are not enough funds to exchange or the requested amount is invalid.");
+                    }
                     break;
 
                 case CommandForExchangePlatinumToGold:
-                    fixedExchange = fixedExchangePlatinumToGold;
-                    selectedCurrency = platinumMoney;
-                    secondCurrency = goldMoney;
-
-                    Converter(ref selectedCurrency, ref secondCurrency, fixedExchange);
-
-                    platinumMoney = selectedCurrency;
-                    goldMoney = secondCurrency;                    
+                    Console.WriteLine("Enter the amount of currency");
+                    userInputAmountCurrency = float.Parse(Console.ReadLine());
+                    
+                    if (platinumMoney >= userInputAmountCurrency)
+                    {
+                        goldMoney += userInputAmountCurrency * fixedExchangePlatinumToGold;
+                        platinumMoney -= userInputAmountCurrency;
+                    }
+                    else
+                    {
+                        Console.WriteLine("There are not enough funds to exchange or the requested amount is invalid.");
+                    }
                     break;
 
                 case CommandForExchangeSilverToPlatinum:
-                    fixedExchange = fixedExchangeSilverToPlatinum;
-                    selectedCurrency = silverMoney;
-                    secondCurrency = platinumMoney;
-
-                    Converter(ref selectedCurrency, ref secondCurrency, fixedExchange);
-
-                    silverMoney = selectedCurrency;
-                    platinumMoney = secondCurrency;                    
+                    Console.WriteLine("Enter the amount of currency");
+                    userInputAmountCurrency = float.Parse(Console.ReadLine());
+                    
+                    if (silverMoney >= userInputAmountCurrency)
+                    {
+                        platinumMoney += userInputAmountCurrency * fixedExchangeSilverToPlatinum;
+                        silverMoney -= userInputAmountCurrency;
+                    }
+                    else
+                    {
+                        Console.WriteLine("There are not enough funds to exchange or the requested amount is invalid.");
+                    }
                     break;
 
                 case CommandForExchangePlatinumToSilver:
-                    fixedExchange = fixedExchangePlatinumToSilver;
-                    selectedCurrency = platinumMoney;
-                    secondCurrency = silverMoney;
-
-                    Converter(ref selectedCurrency, ref secondCurrency, fixedExchange);
-
-                    platinumMoney = selectedCurrency;
-                    silverMoney = secondCurrency;                    
+                    Console.WriteLine("Enter the amount of currency");
+                    userInputAmountCurrency = float.Parse(Console.ReadLine());
+                    
+                    if (platinumMoney >= userInputAmountCurrency)
+                    {
+                        silverMoney += userInputAmountCurrency * fixedExchangePlatinumToSilver;
+                        platinumMoney -= userInputAmountCurrency;
+                    }
+                    else
+                    {
+                        Console.WriteLine("There are not enough funds to exchange or the requested amount is invalid.");
+                    }
                     break;
 
                 case CommandExitProgram:
@@ -118,28 +140,4 @@ class Program
             }
         }
     } 
-    static void Converter(ref float selectedCurrency, ref float secondCurrency, float fixedExchange)
-    {
-        float userInputAmountCurrency;
-        float convertedAmount;
-
-        Console.WriteLine("Enter the amount of currency");
-        userInputAmountCurrency = float.Parse(Console.ReadLine());
-
-        if (ParseError(selectedCurrency, userInputAmountCurrency))
-        {
-            convertedAmount = userInputAmountCurrency * fixedExchange;
-            secondCurrency += convertedAmount;
-            selectedCurrency -= userInputAmountCurrency;
-        }
-    }
-    static bool ParseError(float availableCurrency, float requestedAmount)
-    {
-        if (availableCurrency < requestedAmount || requestedAmount < 0)
-        {
-            Console.WriteLine("There are not enough funds to exchange or the requested amount is invalid.");
-            return false;
-        }
-        return true;
-    }
 }

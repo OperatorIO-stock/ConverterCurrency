@@ -12,3 +12,4 @@
 /home/casper/Документы/Codes/ConverterCurrency/obj/Release/net9.0/ConverterCurrency.pdb
 /home/casper/Документы/Codes/ConverterCurrency/obj/Release/net9.0/ConverterCurrency.genruntimeconfig.cache
 /home/casper/Документы/Codes/ConverterCurrency/obj/Release/net9.0/ref/ConverterCurrency.dll
+/home/casper/Документы/Codes/ConverterCurrency/obj/Release/net9.0/ConverterCurrency.sourcelink.json
