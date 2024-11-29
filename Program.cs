@@ -57,7 +57,7 @@ class Program
                     Console.WriteLine("Enter the amount of currency");
                     userInputAmountCurrency = float.Parse(Console.ReadLine());
                     
-                    if (silverMoney >= userInputAmountCurrency || userInputAmountCurrency > 0)
+                    if (silverMoney >= userInputAmountCurrency && userInputAmountCurrency > 0)
                     {
                         goldMoney += userInputAmountCurrency * fixedExchangeSilverToGold;
                         silverMoney -= userInputAmountCurrency;
@@ -131,6 +131,7 @@ class Program
                 case CommandExitProgram:
                     Console.Clear();
                     Console.WriteLine("Exiting the program");
+                    
                     isProgramWork = false;
                     break;
 
