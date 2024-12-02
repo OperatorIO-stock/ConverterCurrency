@@ -15,10 +15,10 @@ class Program
 
         float fixedExchangeGoldToSilver = 2.3f;
         float fixedExchangeGoldToPlatinum = 1.3f;
-        float fixedExchangeSilverToGold = 1 / 2.3f;
+        float fixedExchangeSilverToGold = 0.46f;
         float fixedExchangeSilverToPlatinum = 0.5f;
-        float fixedExchangePlatinumToSilver = 1 / 0.5f;
-        float fixedExchangePlatinumToGold = 1 / 1.3f;
+        float fixedExchangePlatinumToSilver = 2f;
+        float fixedExchangePlatinumToGold = 0.76f;
 
         float goldMoney = 73;
         float silverMoney = 8;
